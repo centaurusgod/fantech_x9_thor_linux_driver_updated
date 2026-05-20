@@ -54,6 +54,37 @@ Run as root (not recommended for security reasons):
 sudo python driver_frontend.py
 ```
 
+### CLI Mode
+
+Install the `mouse` command:
+
+```bash
+chmod +x install.sh && ./install.sh
+```
+
+The installer will prompt for your Vendor ID and Product ID (defaults: `18f8`/`0fc0`). Reboot after installation.
+
+**Usage:**
+
+```bash
+mouse                    # DPI=2000, LED off
+mouse -c red             # Set LED color
+mouse -d 3200            # Set DPI
+mouse -c blue -d 1600    # Set both
+```
+
+**Supported colors:** `red` `green` `blue` `yellow` `cyan` `violet` `white` `off`
+
+**Supported DPIs:** 200, 400, 600, 800, 1000, 1200, 1600, 2000, 2400, 3200, 4000, 4800
+
+
+**To uninstall:**
+
+```bash
+chmod +x uninstall.sh && ./uninstall.sh
+```
+---
+
 ### Configuration Persistence
 
 The current configuration is saved in **driver.conf** upon pressing the "Save Configuration" button.
